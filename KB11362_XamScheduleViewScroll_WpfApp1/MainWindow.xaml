@@ -1,0 +1,46 @@
+<Window x:Class="KB11362_XamScheduleViewScroll_WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ig="http://schemas.infragistics.com/xaml"
+        xmlns:local="clr-namespace:KB11362_XamScheduleViewScroll_WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="10">
+            <Button
+                x:Name="buttonToYesterday" Margin="0"
+                Content="昨日の9:00にスクロールする"
+                Click="buttonToYesterday_Click"/>
+            <Button x:Name="buttonToToday" Margin="10, 0, 0, 0" Content="今日の9:00にスクロールする" Click="buttonToToday_Click"/>
+            <Button x:Name="buttonToTomorrow" Margin="10, 0, 0, 0" Content="明日の9:00にスクロールする" Click="buttonToTomorrow_Click"/>
+        </StackPanel>
+
+        <ig:ListScheduleDataConnector
+            x:Name="listScheduleDataConnector1"
+            AppointmentItemsSource="{Binding Appointments}"
+            ResourceItemsSource="{Binding Resources}"
+            ResourceCalendarItemsSource="{Binding Calendars}"/>
+        <ig:XamScheduleDataManager
+            x:Name="xamScheduleDataManager1"
+            DataConnector="{Binding ElementName=listScheduleDataConnector1}">
+            <ig:XamScheduleDataManager.CalendarGroups>
+                <ig:CalendarGroup InitialCalendarIds="res1[cal1], res2[cal2], res3[cal3]"/>
+            </ig:XamScheduleDataManager.CalendarGroups>
+        </ig:XamScheduleDataManager>
+        <ig:XamScheduleView
+            x:Name="xamScheduleView1" Grid.Row="1" Margin="10"
+            DataManager="{Binding ElementName=xamScheduleDataManager1}">
+        </ig:XamScheduleView>
+    </Grid>
+</Window>

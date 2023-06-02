@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KB11362_XamScheduleViewScroll_WpfApp1", "KB11362_XamScheduleViewScroll_WpfApp1\KB11362_XamScheduleViewScroll_WpfApp1.csproj", "{2710C7D4-26C9-477F-B137-D05900AA8D4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2710C7D4-26C9-477F-B137-D05900AA8D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2710C7D4-26C9-477F-B137-D05900AA8D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2710C7D4-26C9-477F-B137-D05900AA8D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2710C7D4-26C9-477F-B137-D05900AA8D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {916CAA61-F165-4246-B8C3-8F9107E8C186}
+	EndGlobalSection
+EndGlobal
